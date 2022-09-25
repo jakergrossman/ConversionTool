@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Copyright>Unlicense</Copyright>
+    <Description>Convert between signed, unsigned, and hexadecimal integer notations.</Description>
+    <ApplicationIcon>convert.ico</ApplicationIcon>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <Company>jakergrossman</Company>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>www.github.com/jakergrossman/ConversionTool</RepositoryUrl>
+    <PackageTags>binary; conversion; integer;</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="convert.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
